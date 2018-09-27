@@ -1,5 +1,11 @@
 import React from 'react'
 
-const App = () => <div>hello, 同构</div>
+let tag
+
+const App = ({gists}) => <ul>
+  {gists.map((gist) =>
+    <li key={gist.id}>{gist.description}</li>
+  )}
+</ul>
 
 export default App
